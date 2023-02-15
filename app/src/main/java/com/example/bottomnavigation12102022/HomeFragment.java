@@ -2,6 +2,8 @@ package com.example.bottomnavigation12102022;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,5 +20,13 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ratingBar = view.findViewById(R.id.rating_bar_home);
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Float numberStar = getArguments().getFloat("rating");
+        ratingBar.setRating(numberStar);
     }
 }
