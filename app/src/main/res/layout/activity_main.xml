@@ -25,6 +25,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <fragment
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.bottomnavigation12102022.HomeFragment"
+        android:id="@+id/fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:orientation="vertical"
